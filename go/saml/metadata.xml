@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2016 Red Hat, Inc. and/or its affiliates
+  ~ and other contributors as indicated by the @author tags.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<EntitiesDescriptor Name="urn:keycloak" xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+					xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+	<EntityDescriptor entityID="https://bdsp-test.bdspaas.nadp-nelco.net/auth/realms/master">
+		<IDPSSODescriptor WantAuthnRequestsSigned="true"
+			protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+                        <KeyDescriptor use="signing">
+                          <dsig:KeyInfo>
+                            <dsig:KeyName>MoAcoeIVPl1Whqd9labRxatB2OSDn8jZlIkvhC9Cr7o</dsig:KeyName>
+                            <dsig:X509Data>
+                              <dsig:X509Certificate>MIICmzCCAYMCBgGA/g06PDANBgkqhkiG9w0BAQsFADARMQ8wDQYDVQQDDAZtYXN0ZXIwHhcNMjIwNTI2MDE0NzAxWhcNMzIwNTI2MDE0ODQxWjARMQ8wDQYDVQQDDAZtYXN0ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDESFmCmkfJhuPlHsjHch16Hpxl3Ukd9u3IPRigGxbiaWeXj9IZGsnmdI2NeiBBCUrhiWSJ2Yfq8yCSA3nSgXlyU9Lmn05nK2bVytYAX+RDmHcK/gJys8fqYkav6GWG8LEmakA88kzM7vQoP49V0Seam+bmcB9qgBfVICgoD/gGyegLnu9gCVjTewzN534YanUVaJHMKV+1MJCv136OsTy9uEWmMdLGxL4IdrIkiwpHF5Bxo0NMRfq+/e+6RdayHiOv+N6/YmJdgHuEIrZ82NfjGCHN9uONOsANza1Sl3ZojLplkDdvxGD3XZP1fLKvs3KjCISz93fPLJVK/Zx+gBmzAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAAMP7OkhhrWl7aPAIXsHTt7iUnRasJFsDII/xunf1jrCrUhcBYJF7wycTODRXLStol9ZUYUfMT1vwFZIacAy2MncS8KZikF3+rvaCcZy1FD68y/+Keozm6iyBS6Rd7Deb8SdKBrHywQ92uULeYMuqecJsufN2E83JTNp0cHAI34N+rw1JAa5eyEBo/1ITlrpdyYCIXxI5RDymXdKPSYdw5gYdsbavkoe73PjJlR5jmWJOXjfq1o/LnVnlYlUjQA0bPZCWYVfDEFDqAVG3HoEWgvA9nypb++uE5A+WQkblIjGwDuinUaEdh/ILSoD/goMGS5U7JPUphN1U2luW1sULSM=</dsig:X509Certificate>
+                            </dsig:X509Data>
+                          </dsig:KeyInfo>
+                        </KeyDescriptor>
+
+			<SingleLogoutService
+					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+					Location="https://bdsp-test.bdspaas.nadp-nelco.net/auth/realms/master/protocol/saml" />
+			<SingleLogoutService
+					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+					Location="https://bdsp-test.bdspaas.nadp-nelco.net/auth/realms/master/protocol/saml" />
+			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+			<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+				Location="https://bdsp-test.bdspaas.nadp-nelco.net/auth/realms/master/protocol/saml" />
+			<SingleSignOnService
+				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+				Location="https://bdsp-test.bdspaas.nadp-nelco.net/auth/realms/master/protocol/saml" />
+			<SingleSignOnService
+				Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+				Location="https://bdsp-test.bdspaas.nadp-nelco.net/auth/realms/master/protocol/saml" />
+		</IDPSSODescriptor>
+	</EntityDescriptor>
+</EntitiesDescriptor>
